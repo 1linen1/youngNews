@@ -1,13 +1,11 @@
 <template>
-	<view class="content">
-		<h1>首页</h1>
-	</view>
+  <h1>个人中心</h1>
 </template>
 
 <script setup>
-	
+  
 </script>
 
 <style lang="less">
-	
+
 </style>
