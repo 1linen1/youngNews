@@ -2,12 +2,8 @@
 const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {};
 if (!Array) {
-  const _easycom_NewsItem2 = common_vendor.resolveComponent("NewsItem");
-  _easycom_NewsItem2();
-}
-const _easycom_NewsItem = () => "../../components/NewsItem/NewsItem.js";
-if (!Math) {
-  _easycom_NewsItem();
+  const _component_NewsItem = common_vendor.resolveComponent("NewsItem");
+  _component_NewsItem();
 }
 function _sfc_render(_ctx, _cache) {
   return {
