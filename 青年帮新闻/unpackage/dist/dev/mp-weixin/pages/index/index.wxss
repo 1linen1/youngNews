@@ -1,7 +1,11 @@
+.container .nav {
+  padding: 10rpx 0;
+}
 .container .nav .scroll {
   font-size: 40rpx;
   display: flex;
-  height: 100rpx;
+  height: 60rpx;
+  line-height: 60rpx;
   white-space: nowrap;
 }
 .container .nav .scroll ::-webkit-scrollbar {
@@ -15,4 +19,8 @@
 .container .nav .scroll .item {
   display: inline-block;
   padding: 0 30rpx;
+}
+.container .content .item {
+  padding: 20rpx;
+  border-bottom: 1rpx dotted #efefef;
 }

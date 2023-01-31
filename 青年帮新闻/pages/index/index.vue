@@ -5,6 +5,11 @@
         <view class="item" v-for="item in 10">中国{{item}}</view>
       </scroll-view>
     </view>
+    <view class="content">
+      <view class="item" v-for="item in 10">
+        <NewsItem></NewsItem>
+      </view>
+    </view>
 	</view>
 </template>
 
@@ -15,10 +20,12 @@
 <style lang="less">
   .container {
     .nav {
+      padding: 10rpx 0;
       .scroll {
         font-size: 40rpx;
         display: flex;
-        height: 100rpx;
+        height: 60rpx;
+        line-height: 60rpx;
         white-space: nowrap;
         // 去除scroll-view带的滑动条（微信小程序中没有）
         /deep/ ::-webkit-scrollbar {
@@ -33,6 +40,12 @@
           display: inline-block;
           padding: 0 30rpx;
         }
+      }
+    }
+    .content {
+      .item {
+        padding: 20rpx;
+        border-bottom: 1rpx dotted #efefef;
       }
     }
   }
