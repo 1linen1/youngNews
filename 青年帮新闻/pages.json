@@ -6,16 +6,16 @@
 				"navigationBarTitleText": "青年帮新闻"
 			}
 		}
-	    ,{
-            "path" : "pages/personal/personal",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "个人中心",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-    ],
+    ,{
+          "path" : "pages/personal/personal",
+          "style" :                                                                                    
+          {
+              "navigationBarTitleText": "个人中心",
+              "enablePullDownRefresh": false
+          }
+          
+      }
+  ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "青年帮新闻",

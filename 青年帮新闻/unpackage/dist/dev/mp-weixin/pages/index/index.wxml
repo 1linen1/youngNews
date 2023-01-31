@@ -1,1 +1,1 @@
-<view class="content"><view>首页</view></view>
+<view class="container"><view class="nav"><scroll-view scroll-x class="scroll"><view wx:for="{{a}}" wx:for-item="item" class="item">中国{{item.a}}</view></scroll-view></view></view>
