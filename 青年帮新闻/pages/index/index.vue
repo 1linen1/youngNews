@@ -7,14 +7,18 @@
     </view>
     <view class="content">
       <view class="item" v-for="item in 10">
-        <NewsItem></NewsItem>
+        <NewsItem>
+          <view class="author">帅哥·黄</view>
+          <view class="viewdNum">299浏览</view>
+          <view class="time">2023年01月31日</view>
+        </NewsItem>
       </view>
     </view>
 	</view>
 </template>
 
 <script setup>
-	
+	import NewsItem from '../../components/NewsItem/NewsItem.vue'
 </script>
 
 <style lang="less">

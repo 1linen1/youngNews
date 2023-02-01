@@ -9,9 +9,7 @@
         震惊！十八岁少女十年前居然是8岁！十八岁少女十年前居然是8岁?十八岁少女十年前居然是8岁！
       </view>
       <view class="other">
-        <view class="author">帅哥·黄</view>
-        <view class="viewdNum">299浏览</view>
-        <view class="time">2023年01月31日</view>
+        <slot></slot>
       </view>
     </view>
   </view>
@@ -33,7 +31,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin-top: -5rpx;
+      margin-top: -15rpx;
       padding-bottom: 12rpx;
       margin-left: 15rpx;
       flex: 1;
