@@ -2,11 +2,11 @@
   <view class="newsItem">
     <view class="left">
       <!-- aspectFill：让图片短边能完全显示出来 -->
-      <image src="../../static/images/0.jpg" mode="aspectFill"></image>
+      <image :src="item.picurl" mode="aspectFill"></image>
     </view>
     <view class="right">
       <view class="title">
-        震惊！十八岁少女十年前居然是8岁！十八岁少女十年前居然是8岁?十八岁少女十年前居然是8岁！
+        {{item.title}}
       </view>
       <view class="other">
         <slot></slot>
@@ -14,8 +14,9 @@
     </view>
   </view>
 </template>
-
+  
 <script setup>
+  const {item} = defineProps(['item'])
 </script>
 
 <style lang="less">
