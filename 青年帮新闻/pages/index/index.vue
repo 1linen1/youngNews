@@ -28,14 +28,19 @@
 <script setup>
 	import { ref } from "vue";
   import NewsItem from '../../components/NewsItem/NewsItem.vue'
-  import { onLoad } from '@dcloudio/uni-app'
+  import { onLoad, onReachBottom } from '@dcloudio/uni-app'
   let navList = ref([])
   let newsList = ref([])
   let navIndex = ref(0)
+  let currentPage = 1
+  let tempId = 50
   
   function changeIndex(index, id = 50) {
     console.log(index);
     navIndex.value = index
+    newsList.value = []
+    currentPage = 1
+    tempId = id
     getNewsList(id)
   }
   function toDetail(id, cid) {
@@ -59,10 +64,11 @@
       url: 'https://ku.qingnian8.com/dataApi/news/newslist.php',
       data: {
         cid: id,
-        num: 5
+        num: 7,
+        page: currentPage,
       },
       success(res) {
-        newsList.value = res.data
+        newsList.value = [...newsList.value, ...res.data]
         console.log(res);
       }
     })
@@ -72,6 +78,11 @@
     getNavList()
     getNewsList(50)
   }) 
+  
+  onReachBottom(() => {
+    currentPage++
+    getNewsList(tempId)
+  })
   
 </script>
 

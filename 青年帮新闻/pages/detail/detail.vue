@@ -10,7 +10,7 @@
       </view>
     </view>
     <view class="content">
-      {{newsInfo.content}}
+      <rich-text :nodes="newsInfo.content"></rich-text>
     </view>
     <view class="bottom">
       声明：泵站内容都是黄启强产业，如果侵权去找安欣！泵站内容都是黄启强产业，如果侵权去找安欣！泵站内容都是黄启强产业，如果侵权去找安欣！泵站内容都是黄启强产业，如果侵权去找安欣！！！
@@ -33,6 +33,9 @@
       success(res) {
         console.log(res);
         newsInfo.value = res.data
+        uni.setNavigationBarTitle({
+          title: res.data.title
+        })
         uni.hideLoading()
       }
     })
@@ -61,6 +64,11 @@
       margin: 20rpx 0;
       background-color: #eee;
       font-size: 25rpx
+    }
+    .content {
+      /deep/ img {
+        max-width: 100%;
+      }
     }
     .bottom {
       margin: 20rpx 0 10rpx 0;
